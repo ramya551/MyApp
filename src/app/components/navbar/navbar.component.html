@@ -11,12 +11,28 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><app-sidenav></app-sidenav></li>
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#about">About Us</a></li>
+        <li><a routerLink="/home" routerLinkActive="active-link">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
         <li><a href="#contact">Contact Us</a></li>
+        <li>
+          <md-toolbar color="black">
+            <span class="example-spacer"></span>
+            <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>menu</md-icon> My Company Menu</button>
+
+          </md-toolbar>
+          <md-menu #appMenu="mdMenu">
+            <button md-menu-item>Service 1</button>
+            <button md-menu-item>Service 2</button>
+            <button md-menu-item>Service 3</button>
+            <button md-menu-item>Service 4</button>
+            <button md-menu-item>Help</button>
+
+          </md-menu>
+        </li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
-
+<div>
+<li><app-sidenav></app-sidenav></li>
+</div>

@@ -10,6 +10,10 @@ export class SidenavComponent implements OnInit {
 
   constructor() { }
 
+   randomName(start: any) {
+        start.toggle();
+    }
+
   ngOnInit() {
   }
 
